@@ -1,6 +1,6 @@
 {
-  "name": "electron-webpack-quick-start",
-  "version": "0.0.0",
+  "name": "electron-webpack-template",
+  "version": "0.1.0",
   "license": "MIT",
   "scripts": {
     "dev": "electron-webpack dev",
@@ -9,12 +9,31 @@
     "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
   },
   "dependencies": {
-    "source-map-support": "^0.5.16"
+    "phaser": "^3.23.0",
+    "source-map-support": "0.5.19"
   },
   "devDependencies": {
-    "electron": "8.2.0",
-    "electron-builder": "^22.4.1",
-    "electron-webpack": "^2.8.2",
-    "webpack": "~4.42.1"
+    "@typescript-eslint/eslint-plugin": "^3.0.0",
+    "@typescript-eslint/parser": "^3.0.0",
+    "electron": "9.0.0",
+    "electron-builder": "22.6.1",
+    "electron-webpack": "2.8.2",
+    "electron-webpack-eslint": "^6.0.0",
+    "electron-webpack-ts": "^4.0.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.3",
+    "prettier-eslint": "^9.0.2",
+    "typescript": "^3.9.3",
+    "webpack": "4.43.0"
+  },
+  "electronWebpack": {
+    "commonSourceDirectory": "src/common",
+    "staticSourceDirectory": "src/static",
+    "title": "Infinity Empire",
+    "renderer": {
+      "template": "src/renderer/index.html"
+    }
   }
 }
